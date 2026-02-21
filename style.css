@@ -1,4 +1,33 @@
 :root {
+    /* Light Theme (Default, Clean, High Contrast) */
+    --primary-blue: #F0F4F8;
+    /* Light Off-White Background */
+    --light-blue: #FFFFFF;
+    /* Pure White Cards */
+    --dark-blue: #102A43;
+    /* Very Dark Navy for Main Text/Headers */
+    --accent-blue: #FF6B35;
+    /* Vibrant Orange Accent */
+    --hover-gold: #FF885C;
+    /* Lighter Orange Hover */
+    --white: #FFFFFF;
+    --text-dark: #102027;
+    /* Deep Charcoal Text */
+    --text-light: #486581;
+    /* Medium Grey/Blue Text */
+    --text-muted: #829AB1;
+    /* Muted Grey Text */
+    --card-bg: #FFFFFF;
+    /* Solid White Card */
+    --bg-alt: #E8F1F2;
+    /* Very Light Cyan/Grey alt background */
+    --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --neon-glow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    /* Subtle Orange Drop Shadow */
+}
+
+/* Dark Futuristic Theme (Activated via toggle) */
+[data-theme="dark"] {
     --primary-blue: #09090E;
     /* Deep Space Black */
     --light-blue: #12121A;
@@ -11,12 +40,12 @@
     /* Bright Purple Hover */
     --white: #FFFFFF;
     --text-dark: #FFFFFF;
+    /* White text on dark bg */
     --text-light: #B0B0C0;
     --text-muted: #666680;
     --card-bg: rgba(20, 20, 30, 0.6);
     /* Glass Window */
     --bg-alt: #0C0C14;
-    --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     --neon-glow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
 }
 
@@ -594,6 +623,87 @@ footer {
 .animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0) scale(1);
+}
+
+/* --- Theme Toggle & Utilities --- */
+#theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: 20px;
+    padding: 5px;
+}
+
+#theme-toggle:hover {
+    color: var(--accent-blue);
+    transform: scale(1.1);
+}
+
+[data-theme="dark"] #theme-toggle {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+}
+
+/* --- Quote Modal --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    margin: 10% auto;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid var(--accent-blue);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5), var(--neon-glow);
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.close-btn {
+    color: var(--text-light);
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    color: var(--accent-blue);
+}
+
+.modal-content h3 {
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
 }
 
 /* Responsive */

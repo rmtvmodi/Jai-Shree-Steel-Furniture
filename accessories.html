@@ -22,6 +22,7 @@
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
+            <button id="theme-toggle" aria-label="Toggle Theme">☀️</button>
         </nav>
     </header>
 
@@ -32,41 +33,87 @@
                 <p>Browse our selection of top-quality steel products priced competitively for all your needs.</p>
             </div>
 
-            <div class="service-cards" style="margin-top: 50px;">
+            <div class="service-cards" style="margin-top: 50px; flex-wrap: wrap;">
+                <!-- Existing Edited Items -->
                 <div class="card animate-on-scroll">
                     <img src="images/steel_pipes.png" alt="Steel Pipes"
-                        style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                        style="width: 100%; border-radius: 10px; margin-bottom: 20px;"
+                        onerror="this.src='images/logo.png'">
                     <h3>Steel Pipes</h3>
-                    <p style="font-weight: bold; color: var(--accent-blue); margin-top: 5px;">Starting from ₹150/foot
-                    </p>
-                    <p style="margin-top: 15px;">High-grade stainless steel pipes for construction and plumbing.</p>
+                    <p style="margin-top: 15px; margin-bottom: 20px;">High-grade stainless steel pipes for construction
+                        and plumbing.</p>
+                    <button class="primary-btn quote-btn" data-item="Steel Pipes">Add to Cart</button>
                 </div>
 
                 <div class="card animate-on-scroll">
                     <img src="images/steel_stairs.png" alt="Steel Stairs"
-                        style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                        style="width: 100%; border-radius: 10px; margin-bottom: 20px;"
+                        onerror="this.src='images/logo.png'">
                     <h3>Steel Stairs</h3>
-                    <p style="font-weight: bold; color: var(--accent-blue); margin-top: 5px;">Custom pricing based on
-                        design</p>
-                    <p style="margin-top: 15px;">Modern steel staircases fabricated to perfection for your space.</p>
+                    <p style="margin-top: 15px; margin-bottom: 20px;">Modern steel staircases fabricated to perfection
+                        for your space.</p>
+                    <button class="primary-btn quote-btn" data-item="Steel Stairs">Add to Cart</button>
                 </div>
 
                 <div class="card animate-on-scroll">
                     <img src="images/steel_ganeshji.png" alt="Steel Ganeshji"
-                        style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                        style="width: 100%; border-radius: 10px; margin-bottom: 20px;"
+                        onerror="this.src='images/logo.png'">
                     <h3>Steel Ganeshji Idol</h3>
-                    <p style="font-weight: bold; color: var(--accent-blue); margin-top: 5px;">₹2,500</p>
-                    <p style="margin-top: 15px;">Beautifully crafted Lord Ganesha idol out of polished stainless steel.
-                    </p>
+                    <p style="margin-top: 15px; margin-bottom: 20px;">Beautifully crafted Lord Ganesha idol out of
+                        polished stainless steel.</p>
+                    <button class="primary-btn quote-btn" data-item="Steel Ganeshji Idol">Add to Cart</button>
                 </div>
 
                 <div class="card animate-on-scroll">
                     <img src="images/steel_railings.png" alt="Steel Railings"
-                        style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                        style="width: 100%; border-radius: 10px; margin-bottom: 20px;"
+                        onerror="this.src='images/logo.png'">
                     <h3>Steel Railings</h3>
-                    <p style="font-weight: bold; color: var(--accent-blue); margin-top: 5px;">Starting from ₹450/foot
-                    </p>
-                    <p style="margin-top: 15px;">Elegant and durable steel railings for balconies and staircases.</p>
+                    <p style="margin-top: 15px; margin-bottom: 20px;">Elegant and durable steel railings for balconies
+                        and staircases.</p>
+                    <button class="primary-btn quote-btn" data-item="Steel Railings">Add to Cart</button>
+                </div>
+
+                <!-- New Items -->
+                <div class="card animate-on-scroll">
+                    <div
+                        style="width: 100%; height: 200px; background: var(--card-bg); border-radius: 10px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center;">
+                        🖼️</div>
+                    <h3>Traditional Kalash</h3>
+                    <p style="margin-top: 15px; margin-bottom: 20px;">Polished stainless steel traditional Indian
+                        Kalash.</p>
+                    <button class="primary-btn quote-btn" data-item="Traditional Kalash">Add to Cart</button>
+                </div>
+
+                <div class="card animate-on-scroll">
+                    <div
+                        style="width: 100%; height: 200px; background: var(--card-bg); border-radius: 10px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center;">
+                        🖼️</div>
+                    <h3>Steel L Corner</h3>
+                    <p style="margin-top: 15px; margin-bottom: 20px;">Sleek stainless steel L-shaped corner bracket for
+                        fittings.</p>
+                    <button class="primary-btn quote-btn" data-item="Steel L Corner">Add to Cart</button>
+                </div>
+
+                <div class="card animate-on-scroll">
+                    <div
+                        style="width: 100%; height: 200px; background: var(--card-bg); border-radius: 10px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center;">
+                        🖼️</div>
+                    <h3>Steel Balls</h3>
+                    <p style="margin-top: 15px; margin-bottom: 20px;">Highly polished stainless steel hollow decoration
+                        spheres.</p>
+                    <button class="primary-btn quote-btn" data-item="Steel Balls">Add to Cart</button>
+                </div>
+
+                <div class="card animate-on-scroll">
+                    <div
+                        style="width: 100%; height: 200px; background: var(--card-bg); border-radius: 10px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center;">
+                        🖼️</div>
+                    <h3>Star Window Grill</h3>
+                    <p style="margin-top: 15px; margin-bottom: 20px;">Decorative window grill insert designed in the
+                        shape of a star.</p>
+                    <button class="primary-btn quote-btn" data-item="Star Window Grill">Add to Cart</button>
                 </div>
             </div>
         </section>
@@ -91,6 +138,32 @@
             <p>&copy; 2026 Jai Shree Steel Furniture. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 style="color: var(--white);">Request Quote</h3>
+            <p style="color: var(--text-light); margin-bottom: 20px;">Provide your contact info and our owner will reach
+                out to you directly for pricing on this item.</p>
+            <form id="quoteForm">
+                <div class="form-group">
+                    <label style="color: var(--white);">Interested Item</label>
+                    <input type="text" id="quoteItem" readonly
+                        style="background: var(--bg-alt); color: var(--text-muted); cursor: not-allowed;">
+                </div>
+                <div class="form-group">
+                    <label style="color: var(--white);">Your Name</label>
+                    <input type="text" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label style="color: var(--white);">Phone Number</label>
+                    <input type="tel" required placeholder="+91 00000 00000">
+                </div>
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

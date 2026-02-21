@@ -89,4 +89,82 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1200); // Simulated delay
         });
     }
+
+    // --- Theme Toggle Logic ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggleBtn.innerHTML = '☀️';
+        } else {
+            themeToggleBtn.innerHTML = '🌙';
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggleBtn.innerHTML = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggleBtn.innerHTML = '☀️';
+            }
+        });
+    }
+
+    // --- Quote Modal Logic (Cart Alternative) ---
+    const quoteModal = document.getElementById('quoteModal');
+    const closeBtn = document.querySelector('.close-btn');
+    const itemInput = document.getElementById('quoteItem');
+
+    // Open Modal when any 'add to cart' button is clicked
+    document.querySelectorAll('.quote-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const itemName = btn.getAttribute('data-item') || 'General Inquiry';
+            if (itemInput) itemInput.value = itemName;
+            if (quoteModal) quoteModal.classList.add('show');
+            quoteModal.style.display = 'block';
+        });
+    });
+
+    // Close Modal
+    const closeModal = () => {
+        if (quoteModal) {
+            quoteModal.classList.remove('show');
+            setTimeout(() => { quoteModal.style.display = 'none'; }, 300);
+        }
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    // Close when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === quoteModal) closeModal();
+    });
+
+    // Handle Modal Submit
+    const quoteForm = document.getElementById('quoteForm');
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = quoteForm.querySelector('button');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                alert('Thank you! Your inquiry has been sent. The owner will reach out shortly regarding pricing for: ' + itemInput.value);
+                quoteForm.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                closeModal();
+            }, 1000);
+        });
+    }
+
 });
