@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jai Shree Steel Furniture</title>
+    <meta name="description" content="Premium steel furniture and fabrication works">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="images/logo.png" alt="Jai Shree Steel" onerror="this.style.display='none'">Jai
+                Shree <span>Steel</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Elevate Your Space with Premium Steel</h1>
+                <p>We provide top-quality steel furniture, custom fabrication, and premium accessories built for
+                    durability and style.</p>
+                <div class="hero-buttons">
+                    <button class="btn primary-btn" onclick="scrollToContact()">Get a Quote</button>
+                    <button class="btn secondary-btn" onclick="window.location.href='accessories.html'">View
+                        Accessories</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2 class="animate-on-scroll">Our Custom Works</h2>
+            <div class="service-cards">
+                <div class="card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <img src="images/service_fab.png" alt="Custom Fabrication" class="service-img">
+                    <h3>Custom Fabrication</h3>
+                    <p>Expert custom steel fabrication to meet your specific design and structural requirements.</p>
+                </div>
+                <div class="card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <img src="images/steel_stairs.png" alt="Steel Furniture" class="service-img">
+                    <h3>Steel Furniture</h3>
+                    <p>Durable and beautifully crafted steel furniture for homes, offices, and commercial spaces.</p>
+                </div>
+                <div class="card animate-on-scroll" style="transition-delay: 0.3s;">
+                    <img src="images/steel_railings.png" alt="Architectural Railings" class="service-img">
+                    <h3>Architectural Railings</h3>
+                    <p>Premium steel railings and staircases designed for maximum safety and aesthetic appeal.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2 class="animate-on-scroll">Project Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll"><img src="images/steel_pipes.png" alt="Gallery"></div>
+                <div class="gallery-item animate-on-scroll" style="transition-delay: 0.1s;"><img
+                        src="images/steel_stairs.png" alt="Gallery"></div>
+                <div class="gallery-item animate-on-scroll" style="transition-delay: 0.2s;"><img
+                        src="images/steel_railings.png" alt="Gallery"></div>
+                <div class="gallery-item animate-on-scroll" style="transition-delay: 0.3s;"><img
+                        src="images/steel_ganeshji.png" alt="Gallery"></div>
+                <div class="gallery-item animate-on-scroll" style="transition-delay: 0.4s;"><img
+                        src="images/service_fab.png" alt="Gallery"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content animate-on-scroll">
+                <h2>About Jai Shree Steel Furniture</h2>
+                <p>Founded on the principles of quality and durability, Jai Shree Steel Furniture has been a trusted
+                    partner for all your steel fabrication needs. Our expert craftsmen bring years of experience to
+                    deliver products that last a lifetime.</p>
+                <button class="btn outline-btn" onclick="scrollToContact()">Contact Our Team</button>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="services">
+            <h2 class="animate-on-scroll">Why Choose Us?</h2>
+            <div class="service-cards">
+                <div class="card animate-on-scroll">
+                    <h3>Premium Quality</h3>
+                    <p>We use only the highest grade stainless steel that guarantees strength and longevity against all
+                        weather conditions.</p>
+                </div>
+                <div class="card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <h3>Custom Designs</h3>
+                    <p>Every piece is uniquely tailored to fit your specific space, vision, and architectural
+                        requirements.</p>
+                </div>
+                <div class="card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <h3>Expert Craftsmanship</h3>
+                    <p>Our team consists of highly trained welders and craftsmen with decades of combined fabrication
+                        experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="animate-on-scroll">Get In Touch</h2>
+            <p class="contact-subtitle animate-on-scroll">Ready to start your journey? Fill out the form below to
+                connect with our experts.</p>
+            <form id="contactForm" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required placeholder="John">
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Ltd">
+                </div>
+                <div class="form-group">
+                    <label for="message">How can we help you?</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="Describe your project or inquiry..."></textarea>
+                </div>
+                <button type="submit" class="btn submit-btn">Send Message</button>
+            </form>
+            <div id="formFeedback" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content animate-on-scroll">
+            <div class="footer-brand">
+                <h3>Jai Shree <span>Steel</span></h3>
+                <p>Rahul Modi</p>
+                <p>Mob: 7340282808</p>
+                <p>Address: Udaipur</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#home">Home</a>
+                <a href="accessories.html">Accessories</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jai Shree Steel Furniture. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
